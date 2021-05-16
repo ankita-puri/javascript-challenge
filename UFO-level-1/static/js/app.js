@@ -4,24 +4,16 @@ var tableData = data;
 // YOUR CODE HERE!
 var tbody = d3.select("tbody");
 
-// console.log(data);
-
-
-
-// Step 3:  Use `Object.entries` to console.log each weather report value
  data.forEach(function(ufoSighting) {
-  // console.log(ufoSighting);
+   console.log(ufoSighting);
     var row = tbody.append("tr");
 
 Object.entries(ufoSighting).forEach(function([key, value]) {
-      // console.log(key, value);
+       console.log(key, value);
     var cell = row.append("td");
     cell.text(value);
    });
- });
-
-// Assign the data from `data.js` to a descriptive variable
-//
+});
 
 // Select the button
 var button = d3.select("#filter-btn");
@@ -41,6 +33,7 @@ function runEnter() {
   
   // Select the input element and get the raw HTML node
   var inputElement = d3.select("#datetime");
+  var inputElement = d3.select()
 
   // Get the value property of the input element
   var inputValue = inputElement.property("value");
